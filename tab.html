@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TAB - Twitter Archive Browser</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="tab.js"></script>
+
+    <!--JS Archive Files-->
+    <script src="archive/account.js" defer="true"></script>
+    <script src="archive/profile.js" defer="true"></script>
+    <script src="archive/tweet.js" defer="true"></script>
+</head>
+
+<body>
+    <div id="controls">
+        <label>Start: <input name="start" value="0"> / <span id="tweet-count">-----</span></label> |
+        <label>Show: <input name="limit" value="50" maxlength="4"> Tweets</label> |
+        <label><input type="button" value="Show Tweets" id="update"></label> |
+        <!--<label><input type="button" value="Prev" class="page-nav-button" id="prev" data-dir="prev"></label> |-->
+        <label><input type="button" value="Next" class="page-nav-button" id="next" data-dir="next"></label> |
+        <label><input type="checkbox" name="display-media" checked> Display Media</label> |
+        <label><input type="checkbox" name="display-raw"> Display Raw JSON</label><br>
+        <b>Filters:</b><br>
+        <label>From: <input name="from" value="" type="date"></label> |
+        <label>To: <input name="to" value="" type="date"></label> |
+        <label>Contains: <input name="contains" value=""></label> |
+        <!--
+        <label><input type="checkbox" name="has-link"> Has Link</label> |
+        <label><input type="checkbox" name="has-image"> Has Image</label> |
+        <label><input type="checkbox" name="has-video"> Has Video</label> |
+        -->
+
+    </div>
+    <div id="tweet-output">
+        <div class="id" style="display:none">#0</div>
+    </div>
+
+    <div style="text-align:center"><i><a href="https://github.com/DrDos0016/tab" target="_blank">Twitter Archive Browser</a> - created By Dr. Dos</i></div>
+</body>
+</html>
